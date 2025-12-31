@@ -1,0 +1,9 @@
+{
+	"name": "adfInstacart",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b7a34e11-c547-489b-9919-63f24d0b44fb",
+		"tenantId": "957e6496-87a1-4dfa-85a4-7708b718e619"
+	}
+}
