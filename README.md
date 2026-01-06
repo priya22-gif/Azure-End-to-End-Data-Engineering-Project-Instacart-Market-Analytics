@@ -1,4 +1,4 @@
-<img width="1631" height="719" alt="Screenshot 2025-12-31 223348" src="https://github.com/user-attachments/assets/79d59430-af74-42e4-a5f7-cad20a3021d2" /><img width="1919" height="960" alt="adf_pipeline" src="https://github.com/user-attachments/assets/196f293c-5d6c-4a5e-a17e-7d5fab8693ed" />****🛒 Azure End-to-End Data Engineering Project – Instacart Market Analytics****
+****🛒 Azure End-to-End Data Engineering Project – Instacart Market Analytics****
 
 ****📌 Project Overview****
 
