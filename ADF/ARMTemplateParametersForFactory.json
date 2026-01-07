@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "value": "adfInstacart"
+        },
+        "LS_ADLS_accountKey": {
+            "value": ""
+        },
+        "LS_sqldb_password": {
+            "value": ""
+        },
+        "LS_ADLS_properties_typeProperties_url": {
+            "value": "https://adlsinstacart.dfs.core.windows.net/"
+        },
+        "LS_http_properties_typeProperties_url": {
+            "value": "https://raw.githubusercontent.com/"
+        },
+        "LS_sqldb_properties_typeProperties_server": {
+            "value": "instacartserver.database.windows.net"
+        },
+        "LS_sqldb_properties_typeProperties_database": {
+            "value": "instacartdb"
+        },
+        "LS_sqldb_properties_typeProperties_userName": {
+            "value": "adminpriya"
+        }
+    }
+}
