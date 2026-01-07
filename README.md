@@ -27,19 +27,23 @@ The solution is designed using best practices such as metadata-driven ingestion,
 ****🔹 Parent Pipeline****
 
 - The parent pipeline controls ingestion dynamically using a metadata table.
+- 
+<img width="1919" height="885" alt="Parent Pipeline" src="https://github.com/user-attachments/assets/b68cfb55-58b8-4260-9f64-03c29eed0880" />
 
-  
-  
+    
 **Activities:**
 
 - Lookup Activity – Reads ingestion metadata from a database table
 - ForEach Activity – Iterates over each metadata row
 - Switch Activity – Routes execution based on source_type
 - Execute Pipeline Activity – Executes source-specific child pipelines
+- Fail Activity - Fail pipeline if unsupported source_type found in metadata table
 
 **🔹 Child Pipelines by Source**
 
 **1️⃣ Azure SQL Database Ingestion (Incremental)**
+
+<img width="1919" height="960" alt="adf_pipeline" src="https://github.com/user-attachments/assets/3a0d0f2e-9a35-4244-a623-26f4ac99038e" />
 
 **Activities:**
 - Lookup Activity – Reads CDC / watermark value
@@ -48,9 +52,9 @@ The solution is designed using best practices such as metadata-driven ingestion,
 - Script Activity – Captures maximum CDC column value
 - Copy Activity – Updates watermark JSON file recursively
 
-<img width="1919" height="960" alt="adf_pipeline" src="https://github.com/user-attachments/assets/3a0d0f2e-9a35-4244-a623-26f4ac99038e" />
-
 **2️⃣ GitHub Ingestion**
+
+<img width="1918" height="782" alt="github pipeline" src="https://github.com/user-attachments/assets/24cfc6a0-2eda-4c9a-8acd-8b62fe39d2ae" />
 
 ****Activities:****
 
@@ -59,6 +63,9 @@ The solution is designed using best practices such as metadata-driven ingestion,
 - Copy Activity – Copies data from GitHub to ADLS
 
 **3️⃣ Azure Data Lake Ingestion**
+
+<img width="1919" height="764" alt="Blob pipeline" src="https://github.com/user-attachments/assets/3b1b4e79-f038-4486-ad8b-4ff1ff916879" />
+
 
 **Activities:**
 
@@ -95,7 +102,7 @@ The solution is designed using best practices such as metadata-driven ingestion,
   - Gold layer is designed using a star schema for BI consumption.
 
     
-     <img width="1919" height="952" alt="Screenshot 2025-12-31 184235" src="https://github.com/user-attachments/assets/63d46f70-8ab0-4de7-a976-17202b066811" />
+<img width="1919" height="952" alt="Screenshot 2025-12-31 184235" src="https://github.com/user-attachments/assets/63d46f70-8ab0-4de7-a976-17202b066811" />
 
 ****Dimension Tables****
 
@@ -120,17 +127,24 @@ The solution is designed using best practices such as metadata-driven ingestion,
 
   - Silver layer orchestration
   - Gold layer orchestration
+ 
+<img width="1917" height="872" alt="Workflow" src="https://github.com/user-attachments/assets/73b629c0-45b3-4ad5-9d18-96b27a6ad4cf" />
+
   
 - Job dependencies defined across notebooks
+
 
 - Monitoring enabled:
    - Job execution status
    - Failure tracking
-  
+     
+<img width="1917" height="872" alt="Failure notifications" src="https://github.com/user-attachments/assets/ba351099-1add-441f-8559-89b47cc5c8f3" />
+
+
 - Azure Logic Apps integrated for failure alert notifications
 
-  
-  <img width="1631" height="719" alt="Screenshot 2025-12-31 223348" src="https://github.com/user-attachments/assets/6dd70767-3ca5-4c66-97ef-bc9b1ed752a1" />
+
+<img width="1631" height="719" alt="Screenshot 2025-12-31 223348" src="https://github.com/user-attachments/assets/6dd70767-3ca5-4c66-97ef-bc9b1ed752a1" />
 
 
 ****📊 Power BI Integration****
