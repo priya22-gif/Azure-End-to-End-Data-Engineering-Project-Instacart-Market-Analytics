@@ -1,6 +1,24 @@
-****🛒 Azure End-to-End Data Engineering Project – Instacart Market Analytics****
+# 🛒 Azure End-to-End Data Engineering Project – Instacart Market Analytics
 
-****📌 Project Overview****
+## 📌 Problem Statement
+
+In e-commerce analytics, raw operational data from multiple sources (e.g., SQL databases, GitHub datasets, ADLS files) is not immediately suitable for analytics or reporting. This project builds a scalable, automated Azure data engineering solution that ingests, transforms, and models Instacart market data into analytics-ready datasets, using modern data engineering best practices such as metadata-driven ingestion and medallion (Bronze–Silver–Gold) architecture.
+
+## 🎯 Business Use Cases
+This pipeline enables:
+- Product-level and category-level performance analysis
+- User purchase behavior insights across aisles and departments
+- Time-based trends in orders and repeat purchases
+- Analytics for operational decision support and reporting
+
+## 📊 Key KPIs Enabled
+With the curated datasets, stakeholders can analyze:
+- Total orders and re-orders by product and department
+- User engagement patterns (active vs repeat customers)
+- Most popular products and aisles by volume
+- Order frequency and lifecycle trends over time
+
+## 📌 Project Overview
 
 This project demonstrates end-to-end Azure Data Engineering solution built on the Instacart Market Analytics using a modern lakehouse architecture.
 
@@ -8,12 +26,26 @@ The goal of the project is to ingest data from multiple sources, process it usin
 
 The solution is designed using best practices such as metadata-driven ingestion, incremental data loading, parameterized pipelines, Delta Lake optimization, Slowly Changing Dimensions (SCD), workflow orchestration, and monitoring.
 
-****🏗️ Architecture Overview:****
+## 🏗️ Architecture Overview:
 
 <img width="1767" height="762" alt="Instacart" src="https://github.com/user-attachments/assets/e5c1b14e-632c-418e-91da-de7586264589" />
 
-
-**🎯 Key Design Principles:**
+## 🧰 Technologies Used
+   
+- Cloud Platform:	Microsoft Azure
+- Orchestration: Azure Data Factory
+- Data Storage:	Azure Data Lake Gen2
+- Processing Engine: Azure Databricks(Pyspark)
+- Data Format: Delta Lake
+- Database:	Azure SQL Database
+- Metadata Management: SQL Metadata Tables
+- Automation:	Azure Logic Apps
+- Workflow:	Databricks Lakeflow Jobs
+- Visualization: Power BI
+- CI/CD: Azure DevOps
+- Version Control: GitHub
+ 
+## 🎯 Key Design Principles:
 
 - Metadata Driven Ingestion Pipelines driven by metadata configuration, not hardcoded logic.
 - Medallion architecture (Bronze – Silver – Gold) Lakehouse Pattern 
@@ -21,13 +53,15 @@ The solution is designed using best practices such as metadata-driven ingestion,
 - Reusable & Parameterized Pipelines
 - Fault Tolerance & Monitoring
 - Optimized Data Modeling
-  
-****🧩 Ingestion Architecture (ADF)****
+
+## 🔄 End-to-End Data Flow
+
+### 1️⃣ Data Ingestion – Bronze Layer (Azure Data Factory)
 
 ****🔹 Parent Pipeline****
 
 - The parent pipeline controls ingestion dynamically using a metadata table.
-- 
+  
 <img width="1919" height="885" alt="Parent Pipeline" src="https://github.com/user-attachments/assets/b68cfb55-58b8-4260-9f64-03c29eed0880" />
 
     
@@ -154,21 +188,6 @@ The solution is designed using best practices such as metadata-driven ingestion,
 - Power BI dashboards built on gold-layer star schema
   
 
-****🧰 Technologies Used****
-   
-- Cloud Platform:	Microsoft Azure
-- Orchestration: Azure Data Factory
-- Data Storage:	Azure Data Lake Gen2
-- Processing Engine: Azure Databricks(Pyspark)
-- Data Format: Delta Lake
-- Database:	Azure SQL Database
-- Metadata Management: SQL Metadata Tables
-- Automation:	Azure Logic Apps
-- Workflow:	Databricks Lakeflow Jobs
-- Visualization: Power BI
-- CI/CD: Azure DevOps
-- Version Control: GitHub
-
 ****▶️ How to Run the Project****
 
 - Deploy Azure resources (ADF, ADLS, Databricks, SQL DB).
@@ -193,7 +212,7 @@ The solution is designed using best practices such as metadata-driven ingestion,
 - Implemented monitoring and alerting using Azure Logic Apps
 - Integrated Databricks with Power BI for enterprise reporting
 
-****🏁 Conclusion****
+****🏁 Outcome****
  
   This project showcases an end-to-end Azure data engineering solution following industry-standard architecture and best practices.
   It demonstrates strong expertise in data ingestion, transformation, optimization, orchestration, and analytics delivery using the Azure ecosystem.
